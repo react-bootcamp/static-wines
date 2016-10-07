@@ -51,15 +51,49 @@
                   <p><b>Appellation:</b> Pessac-Léognan</p>
                   <p><b>Color:</b> red</p>
                   <p><b>Grapes:</b> Merlot, Cabernet-Sauvignon</p>
+                  <h5>Comments</h5>
+                  <p>This wine is awesome!</p>
+                  <p>This is too expensive :-(</p>
                 </div>
                 <div class="card-action">
                   <a class="waves-effect waves-teal btn-flat">Like <i class="material-icons left">thumb_up</i></a>
-                  <a class="waves-effect waves-teal btn-flat">Comment <i class="material-icons left">comment</i></a>
+                  <a class="modal-trigger waves-effect waves-teal btn-flat" href="#modalComments">Comment <i class="material-icons left">comment</i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Comments -->
+        <div id="modalComments" class="modal">
+          <div class="modal-content">
+            <h4>Tell us something about this wine</h4>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="inputComment" type="text" class="validate">
+                  <label for="inputComment">Your comment</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+          </div>
+        </div>
+
       </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+          $('.modal-trigger').leanModal();
+        });
+      </script>
     </body>
   </html>
